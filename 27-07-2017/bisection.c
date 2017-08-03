@@ -30,6 +30,7 @@ void bisection(float a, float b){
 
 int main(){
 	float a=2,b=3;
+	printf("Bisection Method\n");
 	printf("Solving for equation : x^3-4x-9\n");
 	bisection(a,b);	
 	return 0;
