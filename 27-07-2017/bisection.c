@@ -1,16 +1,16 @@
 #include <stdio.h>
 #define EPSILON 0.0001
 
-float fx(float x){
+float fx (float x) {
 	return ((x*x*x)-(4*x)-9);
 }
 
-void bisection(float a, float b){
+void bisection (float a, float b) {
 	float m=0;int q=0;
 	if(fx(a)*fx(b)>=0){
 		printf("Wrong Interval\n");
 	}
-	while((b-a)>=EPSILON){
+	while ((b-a) >= EPSILON ) {
 		q+=1;
 		m = (a+b)/2;
 		if(fx(m) == 0){
@@ -28,7 +28,7 @@ void bisection(float a, float b){
 	printf("Number of Iterations : %d\n",q);
 }
 
-int main(){
+int main () {
 	float a=2,b=3;
 	printf("Bisection Method\n");
 	printf("Solving for equation : x^3-4x-9\n");
