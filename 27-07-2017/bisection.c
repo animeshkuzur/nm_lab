@@ -6,11 +6,11 @@ float fx (float x) {
 }
 
 void bisection (float a, float b) {
-	float m=0;int q=0;
+	float m=0;int q=0;float e=1;
 	if(fx(a)*fx(b)>=0){
 		printf("Wrong Interval\n");
 	}
-	while ((b-a) >= EPSILON ) {
+	while (e >= EPSILON ) {
 		q+=1;
 		m = (a+b)/2;
 		if(fx(m) == 0){
@@ -22,9 +22,13 @@ void bisection (float a, float b) {
 		else{
 			a=m;
 		}
+		if((b-a)<0)
+			e=a-b;
+		else
+			e=b-a;
 	}
 	printf("The value of root : %f\n",m);
-	printf("The solution : %f\n",fx(m));
+	//printf("The solution : %f\n",fx(m));
 	printf("Number of Iterations : %d\n",q);
 }
 

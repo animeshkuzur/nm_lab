@@ -5,7 +5,7 @@ float fx(float x){
 	return ((x*x*x)-(4*x)-9);
 }
 
-void secant(float a,float b){
+void newton(float a,float b){
 	float m=0;int q=0;
 	
 }
@@ -14,6 +14,6 @@ int main(){
 	float a=2,b=3;
 	printf("Newton-Raphson Method\n", );
 	printf("Solving for equation : x^3-4x-9\n");
-	secant(a,b);	
+	newton(a,b);	
 	return 0;
 }
